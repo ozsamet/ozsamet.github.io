@@ -1,551 +1,298 @@
-<!DOCTYPE HTML>
-<!--
-	Read Only by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Samet Öz</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="icon" href="images/yel.png" type="image/png" />
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Samet Öz | Portfolio</title>
+  <meta name="description" content="Samet Öz — Actuarial Oversight Associate at AgeSA. METU Statistics graduate. Data science, risk management, and analytics projects."/>
+  <meta property="og:title" content="Samet Öz | Portfolio"/>
+  <meta property="og:description" content="Actuarial Oversight • Data Science • Analytics"/>
+  <meta property="og:type" content="website"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-8MvN2Y8mQmQFIL9qR3b0k0m1nYH9qA3n3n2cQVF0q5H8SWtqP4I7m7+0yF3Qk2o1z5pCq1nJkKkz4qC8YF7Q3w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    :root{
+      --bg:#0f1115; --fg:#eaeef7; --muted:#9aa4b2; --card:#151923; --brand:#6aa3ff; --brand-2:#6bf2d8; --line:#222837;
+      --accent:#ffd166;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg)}
+    a{color:var(--brand);text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(1100px,92%);margin-inline:auto}
 
-		<!-- Header -->
-			<section id="header">
-				<header>
-					<span class="image avatar"><img src="images/foto.jpeg" alt="" /></span>
-					<h1 id="logo"><a href="#">Samet Öz</a></h1>
-					<p style="font-size: 16px;"> Actuarial Oversight Associate at AgeSA |
-					METU Statistics Graduate</p>
-				</header>
-				<nav id="nav">
-					<ul>
-						<li><a href="#one" class="active">About Me</a></li>
-						<li><a href="#two">Experiences</a></li>
-						<li><a href="#three">Portfolio</a></li>
-						<li><a href="#four">Contact Me</a></li>
-					</ul>
-				</nav>
-				<footer>
-					<ul class="icons">
-						<li><a href="https://www.linkedin.com/in/ozsamet/" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
-						<li><a href="https://github.com/ozsamet" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						<li><a href=mailto:ozsamet00@gmail.com class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-				</footer>
-			</section>
+    /* Header */
+    header.site{
+      position:sticky;top:0;z-index:20;background:linear-gradient(180deg,rgba(15,17,21,.95),rgba(15,17,21,.75) 70%,transparent);
+      backdrop-filter:saturate(140%) blur(8px);
+      border-bottom:1px solid var(--line)
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:.8rem 0}
+    .brand{display:flex;align-items:center;gap:.8rem}
+    .brand img{width:42px;height:42px;border-radius:50%;border:2px solid var(--line)}
+    .brand h1{font-size:1.05rem;letter-spacing:.3px;margin:0}
+    nav ul{display:flex;gap:1rem;list-style:none;padding:0;margin:0}
+    nav a{padding:.5rem .8rem;border-radius:.7rem;color:var(--fg)}
+    nav a:hover, nav a.active{background:var(--card)}
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    /* Hero */
+    .hero{padding:72px 0 24px;border-bottom:1px solid var(--line);background:radial-gradient(1200px 600px at 10% -10%, #1a2030 0%, transparent 60%),radial-gradient(800px 500px at 90% -20%, #152028 0%, transparent 60%)}
+    .hero-wrap{display:grid;grid-template-columns:140px 1fr;gap:1.2rem;align-items:center}
+    .hero .avatar{width:140px;height:140px;border-radius:50%;overflow:hidden;border:3px solid #1d2430;box-shadow:0 10px 40px rgba(0,0,0,.45)}
+    .hero h2{margin:0 0 .4rem;font-size:2.1rem}
+    .subtitle{color:var(--muted)}
+    .badge{display:inline-flex;align-items:center;gap:.5rem;padding:.35rem .6rem;border-radius:999px;background:#111621;border:1px solid var(--line);font-size:.82rem;color:var(--muted)}
+    .quick-actions{margin-top:1rem;display:flex;gap:.6rem;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1rem;border-radius:.9rem;border:1px solid var(--line);background:var(--card);color:var(--fg);font-weight:600}
+    .btn:hover{transform:translateY(-1px);transition:.2s}
 
-				<!-- Main -->
-					<div id="main">
+    /* Sections */
+    section{padding:56px 0}
+    h3.section-title{font-size:1.4rem;margin:0 0 1.2rem;display:flex;align-items:center;gap:.6rem}
+    h3.section-title i{color:var(--brand)}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.1rem}
 
-						<!-- One -->
-							<section id="one">
-								<div class="image main" data-position="center">
-									<img src="images/banner.jpg" alt="" />
-								</div>
-								<div class="container">
-									<header class="major">
-										<h2>About Me</h2>
-									</header>
-									<p>A fresh graduate from Middle East Technical University with a degree in Statistics, dedicated to advancing his career in risk management and data science.
-										Possessing strong skills in SQL, Python, Tableau, and machine learning, his have a solid foundation in data analysis and predictive modeling.
-										Well-equipped to contribute to data-driven solutions and innovative projects.</p>
-								</div>
-							</section>
+    /* About */
+    .about p{color:var(--fg);line-height:1.65;margin:.4rem 0}
 
-						<!-- Two -->
-						<section id="two">
-							<div class="container">
-								<header class="major">
-									<h2>Experiences</h2>
-								</header>
-								<div class="experience">
-									<h4><i class="icon solid fa-briefcase"></i> Digital Transformation & Innovative Solutions Team Member - AgeSA </h4>
-									<p class="date">Sep. 2025 - Dec. 2025 </p>
-									<ul>
-										<li>Sabancı Group Seed Program Rotation.</li>
-										<li>Took part in the classification of mobile user scores, supporting data analysis efforts to improve digital engagement and customer satisfaction.</li>
-										<li>Gained hands-on experience in analyzing CX (Customer Experience) operations, identifying process improvement opportunities and innovative approaches to strengthen customer journeys.</li>
-										<li>Collaborated with cross-functional teams to explore digital innovation and transformation initiatives, aligning technological advancements with business goals.</li>
-									</ul>
-								</div>								
-								<div class="experience">
-									<h4><i class="icon solid fa-briefcase"></i> Actuarial Oversight Associate - AgeSA & Aksigorta </h4>
-									<p class="date">Oct. 2024 - Now </p>
-									<ul>
-										<li>As one of only 12 selected candidates, accepted into the prestigious Sabancı Group Seed Program (MT), one of Turkey's most esteemed MT programs, from a pool of over 20K+ applicants.</li>
-										<li>Handled data operations within the Actuarial Oversight Team, carrying out tasks such as data preparation, cleansing, and manipulation to ensure accuracy and consistency, supporting seamless analysis and decision-making processes.</li>
-										<li>Responsible for the company's overall pricing policy, the organization's financial condition, and the reliability and adequacy of technical provisions.</li>
-									</ul>
-								</div>
-								<div class="experience">
-									<h4><i class="icon solid fa-briefcase"></i> Data Science Intern - Allianz Turkey</h4>
-									<p class="date">Sep 2023 - Aug 2024</p>
-									<ul>
-										<li>Worked in an agile environment as a member of the Motor Actuarial Data Science Tribe, contributing to 3 major projects. </li>
-										<li>Classified the policy renewals for light commercial vehicles using techniques such as LightGBM and Optuna, achieving a ROC-AUC score of 0.85. </li>
-										<li>Developed a data drift project to monitor the stability of machine learning models utilized in pricing by applying statistical tests, and created a dashboard using Streamlit </li>
-										<li>Classified the 1700+ features of vehicles into accident-preventive and non-accident-preventive categories using technologies such as NLP, Tokenization and Logistic Regression.</li>
-									</ul>
-								</div>
-								<div class="experience">
-									<h4><i class="icon solid fa-briefcase"></i> Actuary Intern - Anadolu Sigorta</h4>
-									<p class="date">Jul 2022 - Sep 2022</p>
-									<ul>
-										<li>Conducted a research project examining the effects of climate change on actuarial science, and developed solutions for the application of the project to Anadolu Sigorta and Turkey.</li>
-										<li>Gained an introduction to the insurance sector through a component from Anadolu Sigorta, gaining in-depth knowledge of various insurance products.</li>
-										<li>Under the guidance of my mentor, calculated loss ratios and actively participated in casualty analysis and related projects.</li>
-									</ul>
-								</div>
-							</div>
-						</section>
+    /* Experience */
+    .xp-grid{display:grid;grid-template-columns:1fr;gap:1rem}
+    .xp{display:grid;grid-template-columns:1fr auto;gap:.4rem .8rem}
+    .xp h4{margin:.1rem 0}
+    .xp .date{color:var(--muted);font-size:.9rem}
+    .xp ul{grid-column:1/-1;margin:.2rem 0 0 1rem;color:var(--fg)}
 
-						<!-- Three -->
-							<section id="three">
-								<div class="container">
-									<header class="major">
-									<h2>Portfolio</h2></header>
-									<p>If you’d like to dive deeper into my projects, you can click on the photos or titles for more details. To explore more of my work, feel free to visit my GitHub account
-										<a href="https://github.com/ozsamet">@SametOz</a>. </p>
-									<div class="features">
-										<article>
-											<a href="https://github.com/ozsamet/PortfolioProjects/blob/main/Python/Coinmarketcap%20Website%20API%20Pull.ipynb" class="image"><img src="images/kripto.webp" alt="" /></a>
-											<div class="inner">
-												<h4><a href="https://github.com/ozsamet/PortfolioProjects/blob/main/Python/Coinmarketcap%20Website%20API%20Pull.ipynb">Automated Cryptocurrency Data Collection Project</a></h4>
-												<p>Developed an automated system using the CoinMarketCap API to collect cryptocurrency data every minute.</p>
-											</div>
-										</article>
-										<article>
-											<a href="https://github.com/ozsamet/PortfolioProjects/blob/main/SQL/CovidPortfolio.sql" class="image"><img src="images/korona.jpg" alt="" /></a>
-											<div class="inner">
-												<h4><a href="https://github.com/ozsamet/PortfolioProjects/blob/main/SQL/CovidPortfolio.sql">Data Exploration in SQL</a></h4>
-												<p>Data Exploration of Covid 19 Dataset in MS SQL Server.</p>
-											</div>
-										</article>
-										<article>
-											<a href="https://github.com/ozsamet/PortfolioProjects/blob/main/Python/Amazon%20Web%20Scraping.ipynb" class="image"><img src="images/amazon.png" alt="" /></a>
-											<div class="inner">
-												<h4><a href="https://github.com/ozsamet/PortfolioProjects/blob/main/Python/Amazon%20Web%20Scraping.ipynb">Amazon Web Scraping Project</a></h4>
-												<p>Designed a project to automatically extract data from Amazon's website, demonstrating proficiency in web scraping techniques.</p>
-											</div>
-										</article>
-										<article>
-											<a href="https://public.tableau.com/app/profile/samet.z4956/viz/AirBnbProject_17225958903760/Dashboard1" class="image"><img src="images/airbnb.jpeg" alt="" /></a>
-											<div class="inner">
-												<h4><a href="https://public.tableau.com/app/profile/samet.z4956/viz/AirBnbProject_17225958903760/Dashboard1">AirBnb Data Tableau Project</a></h4>
-												<p>In this project AirBnb Dataset is analyzed using Tableau.</p>
-											</div>
-										</article>
-										<article>
-											<a href="https://github.com/ozsamet/PortfolioProjects/blob/main/Python/BIST50.ipynb" class="image"><img src="images/borsa.jpeg" alt="" /></a>
-											<div class="inner">
-												<h4><a href="https://github.com/ozsamet/PortfolioProjects/blob/main/Python/BIST50.ipynb">BIST50 Analysis</a></h4>
-												<p>Conducted an analysis of the price changes over a year for five randomly selected stocks from the BIST 50 index. This project utilized the yFinance library to collect and analyze historical price data, highlighting skills in financial data analysis and stock market trends.</p>
-											</div>
-										</article>
-										<article>
-											<a href="https://github.com/ozsamet/PortfolioProjects/blob/main/SQL/Data%20Cleaning%20Project.sql" class="image"><img src="images/house.jpg" alt="" /></a>
-											<div class="inner">
-												<h4><a href="https://github.com/ozsamet/PortfolioProjects/blob/main/SQL/Data%20Cleaning%20Project.sql">Data Cleaning in SQL</a></h4>
-												<p>In this project, housing data is cleaned using MS SQL Server. The cleaning process involves multiple steps to ensure the data is accurate and ready for analysis.</p>
-											</div>
-										</article>
+    /* Projects */
+    .projects{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
+    .project{display:flex;flex-direction:column;gap:.7rem}
+    .project .thumb{aspect-ratio:16/10;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#0c1018}
+    .project h5{margin:.2rem 0;font-size:1.05rem}
+    .project p{color:var(--muted);margin:0}
+    .chips{display:flex;gap:.35rem;flex-wrap:wrap;margin-top:.4rem}
+    .chip{font-size:.75rem;color:#b7c2d4;background:#111621;border:1px solid var(--line);padding:.25rem .5rem;border-radius:999px}
 
-									</div>
-								</div>
-							</section>
+    /* Contact */
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    form .row{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+    input, textarea{width:100%;background:#0e131d;border:1px solid var(--line);border-radius:12px;padding:.8rem;color:var(--fg)}
+    textarea{min-height:140px}
+    .submit{margin-top:.4rem}
 
-						<!-- Four -->
-						<section id="four">
-							<div class="container">
-								<h3>Contact Me</h3>
-								<p>Feel free to reach out with any questions or comments.</p>
-								<form method="post" action="https://api.web3forms.com/submit">
-									<input type="hidden" name="access_key" value="a6340827-d870-459a-bd09-6f98b3aeffe7">
-									<div class="row gtr-uniform">
-										<div class="col-6 col-12-xsmall">
-											<input type="text" name="name" id="name" placeholder="Name" required />
-										</div>
-										<div class="col-6 col-12-xsmall">
-											<input type="email" name="email" id="email" placeholder="Email" required />
-										</div>
-										<div class="col-12">
-											<input type="text" name="subject" id="subject" placeholder="Subject" />
-										</div>
-										<div class="col-12">
-											<textarea name="message" id="message" placeholder="Message" rows="6" required></textarea>
-										</div>
-										<div class="col-12">
-											<ul class="actions">
-												<li><input type="submit" class="primary" value="Send Message" /></li>
-												<li><input type="reset" value="Reset Form" /></li>
-											</ul>
-										</div>
-									</div>
-								</form>
-							</div>
-						</section>
+    /* Footer */
+    footer.site{border-top:1px solid var(--line);padding:20px 0;color:var(--muted)}
 
-						<!-- Five -->
-						<!--
-							<section id="five">
-								<div class="container">
-									<h3>Elements</h3>
+    /* Small */
+    @media (max-width: 760px){
+      .hero-wrap{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+      form .row{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site">
+    <div class="container nav">
+      <div class="brand">
+        <!-- Replace with your own avatar path -->
+        <img src="images/foto.jpeg" alt="Samet Öz avatar" />
+        <h1>Samet Öz</h1>
+      </div>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a class="active" href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-									<section>
-										<h4>Text</h4>
-										<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-										This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-										This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-										<hr />
-										<header>
-											<h4>Heading with a Subtitle</h4>
-											<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-										</header>
-										<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-										<header>
-											<h5>Heading with a Subtitle</h5>
-											<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-										</header>
-										<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-										<hr />
-										<h2>Heading Level 2</h2>
-										<h3>Heading Level 3</h3>
-										<h4>Heading Level 4</h4>
-										<h5>Heading Level 5</h5>
-										<h6>Heading Level 6</h6>
-										<hr />
-										<h5>Blockquote</h5>
-										<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-										<h5>Preformatted</h5>
-										<pre><code>i = 0;
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-wrap">
+      <div class="avatar">
+        <img src="images/foto.jpeg" alt="Samet Öz"/>
+      </div>
+      <div>
+        <h2>Actuarial Oversight Associate @ AgeSA</h2>
+        <p class="subtitle">METU Statistics graduate • SQL · Python · Tableau · ML</p>
+        <div class="quick-actions">
+          <a class="btn" href="https://www.linkedin.com/in/ozsamet/" target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+          <a class="btn" href="https://github.com/ozsamet" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a class="btn" href="#contact"><i class="fa-solid fa-envelope"></i> Get in Touch</a>
+        </div>
+        <p class="badge" aria-label="availability">Open to new analytics projects & collaborations</p>
+      </div>
+    </div>
+  </section>
 
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
+  <!-- About -->
+  <section id="about" class="container about">
+    <h3 class="section-title"><i class="fa-solid fa-user"></i> About</h3>
+    <div class="card">
+      <p>Hello! I’m Samet — an analyst working at the intersection of risk management and data science. I enjoy building production‑ready, clean and transparent solutions for machine learning, data visualization, and insurance analytics.</p>
+      <p>Interests: model monitoring & data drift, pricing analytics, customer experience analytics, and investment data products.</p>
+    </div>
+  </section>
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-									</section>
+  <!-- Experience -->
+  <section id="experience" class="container">
+    <h3 class="section-title"><i class="fa-solid fa-briefcase"></i> Experience</h3>
+    <div class="xp-grid">
+      <div class="card xp">
+        <h4>Digital Transformation & Innovative Solutions — AgeSA</h4>
+        <div class="date">Sep 2025 – Dec 2025</div>
+        <ul>
+          <li>Sabancı Group Seed Program rotation.</li>
+          <li>Classification of mobile user scores and CX operations analyses.</li>
+          <li>Data‑driven insights for improvement opportunities; collaboration with cross‑functional teams.</li>
+        </ul>
+      </div>
+      <div class="card xp">
+        <h4>Actuarial Oversight Associate — AgeSA & Aksigorta</h4>
+        <div class="date">Oct 2024 – Present</div>
+        <ul>
+          <li>Selected as 1 of 12 for the Sabancı Group Seed Program among 20K+ applicants.</li>
+          <li>Pricing policy, reliability of technical provisions, and data operations.</li>
+        </ul>
+      </div>
+      <div class="card xp">
+        <h4>Data Science Intern — Allianz Turkey</h4>
+        <div class="date">Sep 2023 – Aug 2024</div>
+        <ul>
+          <li>Motor Actuarial Data Science Tribe — contributed to 3 major projects.</li>
+          <li>Renewal classification with LightGBM + Optuna (ROC‑AUC 0.85).</li>
+          <li>Data drift monitoring for pricing models (statistical tests + Streamlit).</li>
+        </ul>
+      </div>
+      <div class="card xp">
+        <h4>Actuary Intern — Anadolu Sigorta</h4>
+        <div class="date">Jul 2022 – Sep 2022</div>
+        <ul>
+          <li>Research on the effects of climate change and insurance analytics.</li>
+          <li>Loss ratio calculations and participation in claims analysis projects.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-									<section>
-										<h4>Lists</h4>
-										<div class="row">
-											<div class="col-6 col-12-xsmall">
-												<h5>Unordered</h5>
-												<ul>
-													<li>Dolor pulvinar etiam magna etiam.</li>
-													<li>Sagittis adipiscing lorem eleifend.</li>
-													<li>Felis enim feugiat dolore viverra.</li>
-												</ul>
-												<h5>Alternate</h5>
-												<ul class="alt">
-													<li>Dolor pulvinar etiam magna etiam.</li>
-													<li>Sagittis adipiscing lorem eleifend.</li>
-													<li>Felis enim feugiat dolore viverra.</li>
-												</ul>
-											</div>
-											<div class="col-6 col-12-xsmall">
-												<h5>Ordered</h5>
-												<ol>
-													<li>Dolor pulvinar etiam magna etiam.</li>
-													<li>Etiam vel felis at lorem sed viverra.</li>
-													<li>Felis enim feugiat dolore viverra.</li>
-													<li>Dolor pulvinar etiam magna etiam.</li>
-													<li>Etiam vel felis at lorem sed viverra.</li>
-													<li>Felis enim feugiat dolore viverra.</li>
-												</ol>
-												<h5>Icons</h5>
-												<ul class="icons">
-													<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-													<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-													<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-													<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-													<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-													<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
-												</ul>
-											</div>
-										</div>
-										<h5>Actions</h5>
-										<ul class="actions">
-											<li><a href="#" class="button primary">Default</a></li>
-											<li><a href="#" class="button">Default</a></li>
-											<li><a href="#" class="button alt">Default</a></li>
-										</ul>
-										<ul class="actions small">
-											<li><a href="#" class="button primary small">Small</a></li>
-											<li><a href="#" class="button small">Small</a></li>
-											<li><a href="#" class="button alt small">Small</a></li>
-										</ul>
-										<div class="row">
-											<div class="col-3 col-6-medium col-12-xsmall">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary">Default</a></li>
-													<li><a href="#" class="button">Default</a></li>
-													<li><a href="#" class="button alt">Default</a></li>
-												</ul>
-											</div>
-											<div class="col-3 col-6 col-12-xsmall">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary small">Small</a></li>
-													<li><a href="#" class="button small">Small</a></li>
-													<li><a href="#" class="button alt small">Small</a></li>
-												</ul>
-											</div>
-											<div class="col-3 col-6-medium col-12-xsmall">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary fit">Default</a></li>
-													<li><a href="#" class="button fit">Default</a></li>
-													<li><a href="#" class="button alt fit">Default</a></li>
-												</ul>
-											</div>
-											<div class="col-3 col-6-medium col-12-xsmall">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary small fit">Small</a></li>
-													<li><a href="#" class="button small fit">Small</a></li>
-													<li><a href="#" class="button alt small fit">Small</a></li>
-												</ul>
-											</div>
-										</div>
-									</section>
+  <!-- Projects -->
+  <section id="projects" class="container">
+    <h3 class="section-title"><i class="fa-solid fa-grid-2"></i> Selected Projects</h3>
+    <div class="projects">
+      <!-- Project 1 -->
+      <article class="project card">
+        <a href="https://github.com/ozsamet/PortfolioProjects/blob/main/Python/Coinmarketcap%20Website%20API%20Pull.ipynb" target="_blank" rel="noreferrer" class="thumb">
+          <img src="images/kripto.webp" alt="Automated crypto data collection"/>
+        </a>
+        <h5><a href="https://github.com/ozsamet/PortfolioProjects/blob/main/Python/Coinmarketcap%20Website%20API%20Pull.ipynb" target="_blank" rel="noreferrer">Automated Cryptocurrency Data Collection</a></h5>
+        <p>Minute‑level data ingestion using CoinMarketCap API.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">API</span><span class="chip">Pandas</span></div>
+      </article>
+      <!-- Project 2 -->
+      <article class="project card">
+        <a href="https://github.com/ozsamet/PortfolioProjects/blob/main/SQL/CovidPortfolio.sql" target="_blank" rel="noreferrer" class="thumb">
+          <img src="images/korona.jpg" alt="COVID SQL exploration"/>
+        </a>
+        <h5><a href="https://github.com/ozsamet/PortfolioProjects/blob/main/SQL/CovidPortfolio.sql" target="_blank" rel="noreferrer">Data Exploration in SQL — COVID‑19</a></h5>
+        <p>Exploratory analysis and metrics on MS SQL Server.</p>
+        <div class="chips"><span class="chip">SQL</span><span class="chip">CTE</span><span class="chip">Window</span></div>
+      </article>
+      <!-- Project 3 -->
+      <article class="project card">
+        <a href="https://github.com/ozsamet/PortfolioProjects/blob/main/Python/Amazon%20Web%20Scraping.ipynb" target="_blank" rel="noreferrer" class="thumb">
+          <img src="images/amazon.png" alt="Amazon scraping"/>
+        </a>
+        <h5><a href="https://github.com/ozsamet/PortfolioProjects/blob/main/Python/Amazon%20Web%20Scraping.ipynb" target="_blank" rel="noreferrer">Amazon Web Scraping</a></h5>
+        <p>Automated data extraction for price tracking.</p>
+        <div class="chips"><span class="chip">Requests</span><span class="chip">BS4</span><span class="chip">Cron</span></div>
+      </article>
+      <!-- Project 4 -->
+      <article class="project card">
+        <a href="https://public.tableau.com/app/profile/samet.z4956/viz/AirBnbProject_17225958903760/Dashboard1" target="_blank" rel="noreferrer" class="thumb">
+          <img src="images/airbnb.jpeg" alt="Airbnb Tableau dashboard"/>
+        </a>
+        <h5><a href="https://public.tableau.com/app/profile/samet.z4956/viz/AirBnbProject_17225958903760/Dashboard1" target="_blank" rel="noreferrer">Airbnb Tableau Dashboard</a></h5>
+        <p>Visual analysis of Airbnb data.</p>
+        <div class="chips"><span class="chip">Tableau</span><span class="chip">Viz</span></div>
+      </article>
+      <!-- Project 5 -->
+      <article class="project card">
+        <a href="https://github.com/ozsamet/PortfolioProjects/blob/main/Python/BIST50.ipynb" target="_blank" rel="noreferrer" class="thumb">
+          <img src="images/borsa.jpeg" alt="BIST50 analysis"/>
+        </a>
+        <h5><a href="https://github.com/ozsamet/PortfolioProjects/blob/main/Python/BIST50.ipynb" target="_blank" rel="noreferrer">BIST50 Analysis</a></h5>
+        <p>Year‑over‑year price change analysis on selected stocks.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">yFinance</span></div>
+      </article>
+      <!-- Project 6 -->
+      <article class="project card">
+        <a href="https://github.com/ozsamet/PortfolioProjects/blob/main/SQL/Data%20Cleaning%20Project.sql" target="_blank" rel="noreferrer" class="thumb">
+          <img src="images/house.jpg" alt="SQL data cleaning"/>
+        </a>
+        <h5><a href="https://github.com/ozsamet/PortfolioProjects/blob/main/SQL/Data%20Cleaning%20Project.sql" target="_blank" rel="noreferrer">Data Cleaning in SQL</a></h5>
+        <p>Multi‑step cleaning on a housing dataset.</p>
+        <div class="chips"><span class="chip">SQL</span><span class="chip">ETL</span></div>
+      </article>
+    </div>
+  </section>
 
-									<section>
-										<h4>Table</h4>
-										<h5>Default</h5>
-										<div class="table-wrapper">
-											<table>
-												<thead>
-													<tr>
-														<th>Name</th>
-														<th>Description</th>
-														<th>Price</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Item One</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Two</td>
-														<td>Vis ac commodo adipiscing arcu aliquet.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Three</td>
-														<td> Morbi faucibus arcu accumsan lorem.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Four</td>
-														<td>Vitae integer tempus condimentum.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Five</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-												</tbody>
-												<tfoot>
-													<tr>
-														<td colspan="2"></td>
-														<td>100.00</td>
-													</tr>
-												</tfoot>
-											</table>
-										</div>
+  <!-- Contact -->
+  <section id="contact" class="container">
+    <h3 class="section-title"><i class="fa-solid fa-paper-plane"></i> Contact</h3>
+    <div class="contact-grid">
+      <div class="card">
+        <form method="post" action="https://api.web3forms.com/submit">
+          <!-- Add your own key: https://web3forms.com/ -->
+          <input type="hidden" name="access_key" value="YOUR-ACCESS-KEY" />
+          <div class="row">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="subject" placeholder="Subject" style="grid-column:1/-1">
+            <textarea name="message" placeholder="Your message" required style="grid-column:1/-1"></textarea>
+          </div>
+          <button class="btn submit" type="submit"><i class="fa-solid fa-paper-plane"></i> Send</button>
+        </form>
+      </div>
+      <div class="card">
+        <p><strong>Links</strong></p>
+        <p><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/ozsamet/" target="_blank" rel="noreferrer">LinkedIn / ozsamet</a></p>
+        <p><i class="fa-brands fa-github"></i> <a href="https://github.com/ozsamet" target="_blank" rel="noreferrer">GitHub / ozsamet</a></p>
+        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:ozsamet00@gmail.com">ozsamet00@gmail.com</a></p>
+      </div>
+    </div>
+  </section>
 
-										<h5>Alternate</h5>
-										<div class="table-wrapper">
-											<table class="alt">
-												<thead>
-													<tr>
-														<th>Name</th>
-														<th>Description</th>
-														<th>Price</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Item One</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Two</td>
-														<td>Vis ac commodo adipiscing arcu aliquet.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Three</td>
-														<td> Morbi faucibus arcu accumsan lorem.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Four</td>
-														<td>Vitae integer tempus condimentum.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Five</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-												</tbody>
-												<tfoot>
-													<tr>
-														<td colspan="2"></td>
-														<td>100.00</td>
-													</tr>
-												</tfoot>
-											</table>
-										</div>
-									</section>
+  <footer class="site">
+    <div class="container">
+      <small>© <span id="y"></span> SO — All rights reserved.</small>
+    </div>
+  </footer>
 
-									<section>
-										<h4>Buttons</h4>
-										<ul class="actions">
-											<li><a href="#" class="button primary">Primary</a></li>
-											<li><a href="#" class="button">Default</a></li>
-											<li><a href="#" class="button alt">Alternate</a></li>
-										</ul>
-										<ul class="actions">
-											<li><a href="#" class="button primary large">Large</a></li>
-											<li><a href="#" class="button">Default</a></li>
-											<li><a href="#" class="button alt small">Small</a></li>
-										</ul>
-										<ul class="actions fit">
-											<li><a href="#" class="button primary fit">Fit</a></li>
-											<li><a href="#" class="button fit">Fit</a></li>
-											<li><a href="#" class="button alt fit">Fit</a></li>
-										</ul>
-										<ul class="actions fit small">
-											<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-											<li><a href="#" class="button fit small">Fit + Small</a></li>
-											<li><a href="#" class="button alt fit small">Fit + Small</a></li>
-										</ul>
-										<ul class="actions">
-											<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-											<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-											<li><a href="#" class="button alt icon solid fa-check">Icon</a></li>
-										</ul>
-										<ul class="actions">
-											<li><span class="button primary disabled">Primary</span></li>
-											<li><span class="button disabled">Default</span></li>
-											<li><span class="button alt disabled">Alternate</span></li>
-										</ul>
-									</section>
+  <script>
+    // Auto year
+    document.getElementById('y').textContent = new Date().getFullYear();
 
-									<section>
-										<h4>Form</h4>
-										<form method="post" action="#">
-											<div class="row gtr-uniform">
-												<div class="col-6 col-12-xsmall">
-													<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-												</div>
-												<div class="col-6 col-12-xsmall">
-													<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-												</div>
-												<div class="col-12">
-													<select name="demo-category" id="demo-category">
-														<option value="">- Category -</option>
-														<option value="1">Manufacturing</option>
-														<option value="1">Shipping</option>
-														<option value="1">Administration</option>
-														<option value="1">Human Resources</option>
-													</select>
-												</div>
-												<div class="col-4 col-12-medium">
-													<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-													<label for="demo-priority-low">Low Priority</label>
-												</div>
-												<div class="col-4 col-12-medium">
-													<input type="radio" id="demo-priority-normal" name="demo-priority">
-													<label for="demo-priority-normal">Normal Priority</label>
-												</div>
-												<div class="col-4 col-12-medium">
-													<input type="radio" id="demo-priority-high" name="demo-priority">
-													<label for="demo-priority-high">High Priority</label>
-												</div>
-												<div class="col-6 col-12-medium">
-													<input type="checkbox" id="demo-copy" name="demo-copy">
-													<label for="demo-copy">Email me a copy of this message</label>
-												</div>
-												<div class="col-6 col-12-medium">
-													<input type="checkbox" id="demo-human" name="demo-human" checked>
-													<label for="demo-human">I am a human and not a robot</label>
-												</div>
-												<div class="col-12">
-													<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-												</div>
-												<div class="col-12">
-													<ul class="actions">
-														<li><input type="submit" value="Send Message" /></li>
-														<li><input type="reset" value="Reset" class="alt" /></li>
-													</ul>
-												</div>
-											</div>
-										</form>
-									</section>
-
-									<section>
-										<h4>Image</h4>
-										<h5>Fit</h5>
-										<span class="image fit"><img src="images/banner.jpg" alt="" /></span>
-										<div class="box alt">
-											<div class="row gtr-50 gtr-uniform">
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-											</div>
-										</div>
-										<h5>Left &amp; Right</h5>
-										<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-										<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-									</section>
-
-								</div>
-							</section>
-						-->
-
-					</div>
-
-				<!-- Footer -->
-					<section id="footer">
-						<div class="container">
-							<ul class="copyright">
-								<li>&copy; SO</li>
-							</ul>
-						</div>
-					</section>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    // Active nav link (simple)
+    const links=[...document.querySelectorAll('header nav a')];
+    const obs=new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          links.forEach(l=>l.classList.remove('active'));
+          const id = '#'+e.target.id;
+          const hit = links.find(l=>l.getAttribute('href')===id);
+          if(hit) hit.classList.add('active');
+        }
+      })
+    },{rootMargin:'-45% 0px -50% 0px',threshold:0});
+    ['about','experience','projects','contact'].forEach(id=>{
+      const el=document.getElementById(id); if(el) obs.observe(el);
+    });
+  </script>
+</body>
 </html>
-
