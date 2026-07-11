@@ -3,15 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Samet Öz | Portfolio</title>
-  <meta name="description" content="Samet Öz — Actuarial Oversight Associate at AgeSA. METU Statistics graduate. Data science, risk management, and analytics projects."/>
-  <meta property="og:title" content="Samet Öz | Portfolio"/>
-  <meta property="og:description" content="Actuarial Oversight • Data Science • Analytics"/>
+  <title>Samet Öz | Actuarial Oversight & Data Science</title>
+  <meta name="description" content="Samet Öz — Senior Actuarial Oversight Specialist at AgeSA & Aksigorta. METU Statistics graduate. Reserving, IBNR, IFRS 17, and data science in insurance."/>
+  <meta property="og:title" content="Samet Öz | Actuarial Oversight & Data Science"/>
+  <meta property="og:description" content="Senior Actuarial Oversight Specialist @ AgeSA & Aksigorta — reserving, IBNR, IFRS 17, Python."/>
   <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://ozsamet.github.io/"/>
+  <!-- TODO: add a 1200x630 preview image at images/og.png so link previews aren't blank -->
+  <meta property="og:image" content="https://ozsamet.github.io/images/og.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-8MvN2Y8mQmQFIL9qR3b0k0m1nYH9qA3n3n2cQVF0q5H8SWtqP4I7m7+0yF3Qk2o1z5pCq1nJkKkz4qC8YF7Q3w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- integrity hash removed: the previous one was invalid and blocked the entire icon stylesheet -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Favicon -->
   <link rel="icon" href="images/yel.png?v=2" type="image/png" />
   <link rel="shortcut icon" href="images/yel.png?v=2" type="image/png" />
@@ -28,6 +33,7 @@
     a{color:var(--brand);text-decoration:none}
     img{max-width:100%;display:block}
     .container{width:min(1100px,92%);margin-inline:auto}
+    :focus-visible{outline:2px solid var(--brand-2);outline-offset:2px;border-radius:6px}
 
     /* Header */
     header.site{
@@ -35,31 +41,32 @@
       backdrop-filter:saturate(140%) blur(8px);
       border-bottom:1px solid var(--line)
     }
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:.8rem 0}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:.8rem 0;gap:1rem}
     .brand{display:flex;align-items:center;gap:.8rem}
-    .brand img{width:42px;height:42px;border-radius:50%;border:2px solid var(--line)}
+    .brand img{width:42px;height:42px;border-radius:50%;border:2px solid var(--line);object-fit:cover}
     .brand h1{font-size:1.05rem;letter-spacing:.3px;margin:0}
-    nav ul{display:flex;gap:1rem;list-style:none;padding:0;margin:0}
-    nav a{padding:.5rem .8rem;border-radius:.7rem;color:var(--fg)}
+    nav ul{display:flex;gap:.4rem;list-style:none;padding:0;margin:0;flex-wrap:wrap}
+    nav a{padding:.5rem .8rem;border-radius:.7rem;color:var(--fg);font-size:.95rem}
     nav a:hover, nav a.active{background:var(--card)}
 
     /* Hero */
     .hero{padding:72px 0 24px;border-bottom:1px solid var(--line);background:radial-gradient(1200px 600px at 10% -10%, #1a2030 0%, transparent 60%),radial-gradient(800px 500px at 90% -20%, #152028 0%, transparent 60%)}
     .hero-wrap{display:grid;grid-template-columns:140px 1fr;gap:1.2rem;align-items:center}
     .hero .avatar{width:140px;height:140px;border-radius:50%;overflow:hidden;border:3px solid #1d2430;box-shadow:0 10px 40px rgba(0,0,0,.45)}
-    .hero h2{margin:0 0 .4rem;font-size:2.1rem}
-    .subtitle{color:var(--muted)}
+    .hero .avatar img{width:100%;height:100%;object-fit:cover}
+    .hero h2{margin:0 0 .4rem;font-size:2.1rem;line-height:1.2}
+    .subtitle{color:var(--muted);margin:.2rem 0}
     .badge{display:inline-flex;align-items:center;gap:.5rem;padding:.35rem .6rem;border-radius:999px;background:#111621;border:1px solid var(--line);font-size:.82rem;color:var(--muted)}
     .quick-actions{margin-top:1rem;display:flex;gap:.6rem;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;gap:.55rem;padding:.72rem 1.05rem;border-radius:.95rem;border:1px solid var(--line);background:var(--card);color:var(--fg);font-weight:600;line-height:1;transition:transform .15s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease}
+    .btn{display:inline-flex;align-items:center;gap:.55rem;padding:.72rem 1.05rem;border-radius:.95rem;border:1px solid var(--line);background:var(--card);color:var(--fg);font-weight:600;line-height:1;transition:transform .15s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease;cursor:pointer}
     .btn:hover{transform:translateY(-1px);box-shadow:0 6px 24px rgba(0,0,0,.25);border-color:#2a3142}
     .btn i{font-size:1.1rem;opacity:.95}
     .btn svg{width:1.15rem;height:1.15rem;display:inline-block}
     .btn span{letter-spacing:.2px}
-    /* Brand hovers */
     .btn--linkedin:hover{background:#0a66c2;border-color:#0a66c2;color:#fff}
     .btn--github:hover{background:#24292e;border-color:#24292e;color:#fff}
     .btn--contact:hover{background:#1f2a3a;border-color:#1f2a3a}
+    .btn--cv:hover{background:#2a2438;border-color:#3a3350}
     .btn--linkedin:hover i,.btn--linkedin:hover svg{color:#fff;fill:#fff}
     .btn--github:hover i,.btn--github:hover svg{color:#fff;fill:#fff}
     .btn--contact:hover i,.btn--contact:hover svg{color:#6bf2d8;fill:#6bf2d8}
@@ -71,39 +78,62 @@
     .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.1rem}
 
     /* About */
-    .about p{color:var(--fg);line-height:1.65;margin:.4rem 0}
+    .about p{color:var(--fg);line-height:1.65;margin:.4rem 0 .9rem}
+    .about p:last-child{margin-bottom:0}
+    .lede{font-size:1.06rem}
+    .toolbox{margin-top:1rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+    .toolbox h6{margin:0 0 .5rem;font-size:.78rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:600}
 
     /* Experience */
     .xp-grid{display:grid;grid-template-columns:1fr;gap:1rem}
     .xp{display:grid;grid-template-columns:1fr auto;gap:.4rem .8rem}
-    .xp h4{margin:.1rem 0}
-    .xp .date{color:var(--muted);font-size:.9rem}
-    .xp ul{grid-column:1/-1;margin:.2rem 0 0 1rem;color:var(--fg)}
+    .xp h4{margin:.1rem 0;display:flex;align-items:center;gap:.55rem;font-size:1.02rem}
+    .xp h4 i{color:var(--brand);font-size:.95rem}
+    .xp .org{grid-column:1/-1;color:var(--brand-2);font-size:.9rem;margin:0}
+    .xp .date{color:var(--muted);font-size:.9rem;white-space:nowrap}
+    .xp ul{grid-column:1/-1;margin:.5rem 0 0 1rem;padding:0;color:var(--fg);line-height:1.55}
+    .xp li{margin-bottom:.35rem}
+
+    /* Education */
+    .edu{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+    .edu h4{margin:0 0 .25rem}
+    .edu p{margin:0;color:var(--muted)}
 
     /* Projects */
     .projects{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
     .project{display:flex;flex-direction:column;gap:.7rem}
-    .project .thumb{aspect-ratio:16/10;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#0c1018}
+    .project .thumb{aspect-ratio:16/10;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#0c1018;display:block}
+    .project .thumb img{width:100%;height:100%;object-fit:cover}
+    .thumb--glyph{display:grid;place-items:center;background:radial-gradient(420px 220px at 30% 0%, #1c2434 0%, #0c1018 70%)}
+    .thumb--glyph i{font-size:2.4rem;color:var(--brand);opacity:.85}
     .project h5{margin:.2rem 0;font-size:1.05rem}
     .project p{color:var(--muted);margin:0}
     .chips{display:flex;gap:.35rem;flex-wrap:wrap;margin-top:.4rem}
     .chip{font-size:.75rem;color:#b7c2d4;background:#111621;border:1px solid var(--line);padding:.25rem .5rem;border-radius:999px}
+    .chip--internal{color:var(--accent);border-color:#3a3323}
 
     /* Contact */
     .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
     form .row{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
-    input, textarea{width:100%;background:#0e131d;border:1px solid var(--line);border-radius:12px;padding:.8rem;color:var(--fg)}
+    input, textarea{width:100%;background:#0e131d;border:1px solid var(--line);border-radius:12px;padding:.8rem;color:var(--fg);font-family:inherit}
     textarea{min-height:140px}
-    .submit{margin-top:.4rem}
+    .submit{margin-top:.8rem}
+    .hp{position:absolute;left:-9999px;opacity:0;height:0;width:0}
 
     /* Footer */
     footer.site{border-top:1px solid var(--line);padding:20px 0;color:var(--muted)}
 
-    /* Small */
     @media (max-width: 760px){
       .hero-wrap{grid-template-columns:1fr}
+      .hero h2{font-size:1.6rem}
       .contact-grid{grid-template-columns:1fr}
       form .row{grid-template-columns:1fr}
+      .xp{grid-template-columns:1fr}
+      .xp .date{white-space:normal}
+    }
+    @media (prefers-reduced-motion: reduce){
+      html{scroll-behavior:auto}
+      *{transition:none !important}
     }
   </style>
 </head>
@@ -112,7 +142,7 @@
   <header class="site">
     <div class="container nav">
       <div class="brand">
-        <img src="images/foto.jpeg" alt="Samet Öz avatar" />
+        <img src="images/foto.jpeg" alt="" />
         <h1>Samet Öz</h1>
       </div>
       <nav aria-label="Main navigation">
@@ -120,6 +150,7 @@
           <li><a class="active" href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -133,8 +164,8 @@
         <img src="images/foto.jpeg" alt="Samet Öz"/>
       </div>
       <div>
-        <h2>Actuarial Oversight Associate @ AgeSA</h2>
-        <p class="subtitle">METU Statistics graduate • SQL · Python · Tableau · ML</p>
+        <h2>Senior Actuarial Oversight Specialist @ AgeSA &amp; Aksigorta</h2>
+        <p class="subtitle">METU Statistics graduate • Reserving · IBNR · IFRS 17 • Python · SQL · R · Arius</p>
         <div class="quick-actions">
           <a class="btn btn--linkedin" href="https://www.linkedin.com/in/ozsamet/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
             <svg viewBox="0 0 448 512" aria-hidden="true" focusable="false" style="fill:currentColor"><path d="M100.28 448H7.4V148.9h92.88zm-46.44-341C24.09 107 0 82.77 0 53.64A53.64 53.64 0 0 1 53.84 0c29.7 0 53.48 24.23 53.48 53.64 0 29.13-23.78 53.36-53.48 53.36zM447.9 448h-92.38V302.4c0-34.7-.69-79.3-48.35-79.3-48.39 0-55.8 37.8-55.8 76.8V448h-92.5V148.9h88.78v40.8h1.28c12.38-23.5 42.64-48.3 87.76-48.3 93.9 0 111.2 61.9 111.2 142.3V448z"/></svg>
@@ -144,183 +175,270 @@
             <svg viewBox="0 0 496 512" aria-hidden="true" focusable="false" style="fill:currentColor"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-2-3-3.3-5.9-2.9zM244 8C106 8 0 113.3 0 251.3c0 107.4 69.8 198.5 166.5 230.8 12.2 2.3 16.5-5.2 16.5-11.6 0-5.9-.3-25.4-.3-46.4-60.1 13.1-72.6-26.2-72.6-26.2-11.3-28.8-27.8-36.4-27.8-36.4-22.9-15.7 1.6-15.4 1.6-15.4 25.4 1.6 38.7 26.2 38.7 26.2 22.6 38.7 59.4 27.5 74 21 2.3-16.5 8.8-27.5 16-33.8-48-5.2-98.4-24-98.4-107.1 0-23.8 8.5-43.4 22.6-58.6-2.3-5.5-9.8-28.1 2.3-58.6 0 0 18.5-5.9 60.4 22.6 17.6-4.9 36.4-7.2 55.3-7.5 18.8.3 37.7 2.6 55.3 7.5 41.9-28.4 60.4-22.6 60.4-22.6 11.3 30.5 4.6 53.1 2.3 58.6 14.1 15.2 22.6 34.8 22.6 58.6 0 83.4-50.7 101.9-98.7 107.1 9.2 7.9 17 23.3 17 47.4 0 34.1-.3 61.6-.3 70.2 0 6.5 4.3 14.2 16.8 11.6C426.2 449.8 496 358.7 496 251.3 496 113.3 383 8 244 8z"/></svg>
             <span>GitHub</span>
           </a>
+          <!-- TODO: drop your CV at files/SametOz_CV.pdf, or delete this button -->
+          <a class="btn btn--cv" href="files/SametOz_CV.pdf" target="_blank" rel="noreferrer" aria-label="Download CV">
+            <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
+            <span>Download CV</span>
+          </a>
           <a class="btn btn--contact" href="#contact" aria-label="Get in Touch">
             <svg viewBox="0 0 512 512" aria-hidden="true" focusable="false" style="fill:currentColor"><path d="M502.3 190.8 327.4 338c-15.2 12.8-38.6 12.8-53.8 0L9.7 190.8C3.9 185.9 0 178.5 0 170.6c0-23.2 25.2-37.9 45.5-25.5L256 288l210.5-143c20.3-12.4 45.5 2.3 45.5 25.5 0 7.9-3.9 15.3-9.7 20.3z"/></svg>
             <span>Get in Touch</span>
           </a>
         </div>
-        <p class="badge" aria-label="availability">Open to new analytics projects & collaborations</p>
+        <p class="badge" aria-label="availability">Open to analytics &amp; actuarial collaborations</p>
       </div>
     </div>
   </section>
 
   <!-- About -->
   <section id="about" class="container about">
-    <h3 class="section-title"><i class="fa-solid fa-user"></i> About</h3>
+    <h3 class="section-title"><i class="fa-solid fa-user" aria-hidden="true"></i> About</h3>
     <div class="card">
-      <p>Hello! I’m Samet — an analyst working at the intersection of risk management and data science. I enjoy building production‑ready, clean and transparent solutions for machine learning, data visualization, and insurance analytics.</p>
-      <p>Interests: model monitoring & data drift, pricing analytics, customer experience analytics, and investment data products.</p>
+      <p class="lede">I'm Samet — a METU Statistics graduate working in actuarial oversight, the 2nd line of defence, across Sabancı Group's insurance entities (AgeSA, Aksigorta, Medisa).</p>
+      <p>That training gave me the quantitative foundation I rely on daily: probability and stochastic modelling, regression and time-series analysis, and the discipline to question a number before accepting it — exactly what independent reserve review demands.</p>
+      <p>Today I review and challenge reserving outputs for P&amp;C and L&amp;H portfolios, run sensitivity and variance analyses, and perform independent IBNR reasonableness checks across group entities — while automating the data validation and reconciliation work that audit-quality actuarial analysis depends on.</p>
+      <p>Before reserving, I spent a year as a data science intern at Allianz Türkiye, building predictive models and monitoring tools for motor pricing. I'm interested in where statistical rigour meets actuarial judgement: reserve risk, IFRS 17, and model validation.</p>
+
+      <div class="toolbox">
+        <div>
+          <h6>Actuarial</h6>
+          <div class="chips">
+            <span class="chip">Reserving</span><span class="chip">IBNR</span><span class="chip">IFRS 17</span><span class="chip">Arius</span><span class="chip">Loss ratio analysis</span>
+          </div>
+        </div>
+        <div>
+          <h6>Data &amp; code</h6>
+          <div class="chips">
+            <span class="chip">Python</span><span class="chip">SQL</span><span class="chip">R</span><span class="chip">SAS</span><span class="chip">Tableau</span><span class="chip">Streamlit</span>
+          </div>
+        </div>
+        <div>
+          <h6>Modelling</h6>
+          <div class="chips">
+            <span class="chip">LightGBM</span><span class="chip">Optuna</span><span class="chip">NLP</span><span class="chip">Data drift</span><span class="chip">Model validation</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Experience -->
   <section id="experience" class="container">
-    <h3 class="section-title"><i class="fa-solid fa-briefcase"></i> Experiences</h3>
+    <h3 class="section-title"><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Experience</h3>
     <div class="xp-grid">
+
       <div class="card xp">
-        <h4><i class="icon solid fa-briefcase"></i> Digital Transformation & Innovative Solutions Team Member - AgeSA </h4>
-        <div class="date">Sep. 2025 - Dec. 2025 </div>
+        <h4><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Senior Actuarial Oversight Specialist</h4>
+        <div class="date">Apr 2026 — Present</div>
+        <p class="org">AgeSA Hayat ve Emeklilik &amp; Aksigorta</p>
         <ul>
-          <li>Sabancı Group Seed Program Rotation.</li>
-          <li>Took part in the classification of mobile user scores, supporting data analysis efforts to improve digital engagement and customer satisfaction.</li>
-          <li>Gained hands-on experience in analyzing CX (Customer Experience) operations, identifying process improvement opportunities and innovative approaches to strengthen customer journeys.</li>
-          <li>Collaborated with cross-functional teams to explore digital innovation and transformation initiatives, aligning technological advancements with business goals.</li>
+          <li>Review 2nd-line reserves for P&amp;C and L&amp;H portfolios in Arius, strengthening reserve governance across the group.</li>
+          <li>Run variance and sensitivity analyses to challenge deterministic reserving outputs and keep results audit-ready.</li>
+          <li>Review actuarial calculations and methodologies against internal governance frameworks and actuarial standards.</li>
         </ul>
       </div>
+
       <div class="card xp">
-        <h4><i class="icon solid fa-briefcase"></i> Actuarial Oversight Associate - AgeSA & Aksigorta & Medisa </h4>
-        <div class="date">Oct. 2024 - Now </div>
+        <h4><i class="fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i> Actuarial Oversight Specialist</h4>
+        <div class="date">Oct 2024 — Apr 2026</div>
+        <p class="org">AgeSA Hayat ve Emeklilik &amp; Aksigorta — shared review-actuary resource across AgeSA, Aksigorta and Medisa</p>
         <ul>
-          <li>As one of only 12 selected candidates, accepted into the prestigious Sabancı Group Seed Program (MT), one of Turkey's most esteemed MT programs, from a pool of over 20K+ applicants.</li>
-          <li>Handled data operations within the Actuarial Oversight Team, carrying out tasks such as data preparation, cleansing, and manipulation to ensure accuracy and consistency, supporting seamless analysis and decision-making processes.</li>
-          <li>Responsible for the company's overall pricing policy, the organization's financial condition, and the reliability and adequacy of technical provisions.</li>
-          <li>Contributed to IBNR modeling and performed impact analyses within Sabancı Group’s insurance companies, supporting actuarial evaluations and strengthening the accuracy of reserve estimations.</li>
+          <li>Selected as 1 of 12 candidates from 20,000+ applicants for the Sabancı Group Seed Program (Management Trainee), including leadership, innovation and digital transformation training at Sabancı University.</li>
+          <li>Performed actuarial data review and validation — reconciliation, cleansing and consistency checks — using Python to automate the procedures behind audit-quality analyses and regulatory compliance.</li>
+          <li>Contributed to IBNR modelling and reserve impact analyses across the group's insurance entities, running reasonableness checks, sensitivity assessments and high-level validation of assumptions and results.</li>
         </ul>
       </div>
+
       <div class="card xp">
-        <h4><i class="icon solid fa-briefcase"></i> Data Science Intern - Allianz Turkey</h4>
-        <div class="date">Sep 2023 - Aug 2024</div>
+        <h4><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i> Digital Transformation &amp; Innovative Solutions <span style="color:var(--muted);font-weight:400">— Seed rotation</span></h4>
+        <div class="date">Sep 2025 — Dec 2025</div>
+        <p class="org">AgeSA Hayat ve Emeklilik</p>
         <ul>
-          <li>Worked in an agile environment as a member of the Motor Actuarial Data Science Tribe, contributing to 3 major projects. </li>
-          <li>Classified the policy renewals for light commercial vehicles using techniques such as LightGBM and Optuna, achieving a ROC-AUC score of 0.85. </li>
-          <li>Developed a data drift project to monitor the stability of machine learning models utilized in pricing by applying statistical tests, and created a dashboard using Streamlit </li>
-          <li>Classified the 1700+ features of vehicles into accident-preventive and non-accident-preventive categories using technologies such as NLP, Tokenization and Logistic Regression.</li>
+          <li>Built a tool that analyses App Store / Play Store reviews and benchmarks them against competitor feedback to surface product improvement opportunities.</li>
+          <li>Classified mobile user scores to support digital engagement and customer satisfaction analysis.</li>
+          <li>Analysed CX operations to identify process improvements and strengthen customer journeys, working across functions on digital transformation initiatives.</li>
         </ul>
       </div>
+
       <div class="card xp">
-        <h4><i class="icon solid fa-briefcase"></i> Actuary Intern - Anadolu Sigorta</h4>
-        <div class="date">Jul 2022 - Sep 2022</div>
+        <h4><i class="fa-solid fa-chart-line" aria-hidden="true"></i> Data Science Intern</h4>
+        <div class="date">Sep 2023 — Aug 2024</div>
+        <p class="org">Allianz Türkiye — Motor Tribe, Advanced Analytics Squad</p>
         <ul>
-          <li>Conducted a research project examining the effects of climate change on actuarial science, and developed solutions for the application of the project to Anadolu Sigorta and Turkey.</li>
-          <li>Gained an introduction to the insurance sector through a component from Anadolu Sigorta, gaining in-depth knowledge of various insurance products.</li>
-          <li>Under the guidance of my mentor, calculated loss ratios and actively participated in casualty analysis and related projects.</li>
+          <li>Worked in an agile squad on 3 major projects across pricing and portfolio analytics.</li>
+          <li>Classified policy renewals for light commercial vehicles with LightGBM and Optuna, reaching a 0.87 ROC-AUC.</li>
+          <li>Built a data drift project to monitor the stability of pricing models using statistical tests, delivered as a Streamlit dashboard.</li>
+          <li>Classified 1,700+ vehicle features into accident-preventive and non-accident-preventive categories using NLP, tokenization and logistic regression.</li>
         </ul>
       </div>
+
+      <div class="card xp">
+        <h4><i class="fa-solid fa-seedling" aria-hidden="true"></i> Actuary Intern</h4>
+        <div class="date">Jul 2022 — Sep 2022</div>
+        <p class="org">Anadolu Sigorta</p>
+        <ul>
+          <li>Researched the effects of climate change on actuarial science and proposed how the findings could be applied at Anadolu Sigorta and in Türkiye.</li>
+          <li>Calculated loss ratios and took part in casualty analysis projects under a mentor.</li>
+        </ul>
+      </div>
+
     </div>
   </section>
 
   <!-- Projects -->
   <section id="projects" class="container">
-    <h3 class="section-title"><i class="fa-solid fa-grid-2"></i> Selected Projects</h3>
+    <h3 class="section-title"><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Selected Projects</h3>
     <div class="projects">
-      <!-- Project 1 -->
+
+      <!-- Work project 1 -->
+      <article class="project card">
+        <div class="thumb thumb--glyph"><i class="fa-solid fa-comments" aria-hidden="true"></i></div>
+        <h5>App Store Review Analytics</h5>
+        <p>NLP tool that scores App/Play Store reviews and benchmarks them against competitor feedback to surface product improvements.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">NLP</span><span class="chip">CX</span><span class="chip chip--internal">Internal — no public repo</span></div>
+      </article>
+
+      <!-- Work project 2 -->
+      <article class="project card">
+        <div class="thumb thumb--glyph"><i class="fa-solid fa-wave-square" aria-hidden="true"></i></div>
+        <h5>Data Drift Monitoring for Pricing Models</h5>
+        <p>Statistical tests tracking the stability of production pricing models, surfaced through a Streamlit dashboard.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">Streamlit</span><span class="chip">Model monitoring</span><span class="chip chip--internal">Internal — no public repo</span></div>
+      </article>
+
+      <!-- Work project 3 -->
+      <article class="project card">
+        <div class="thumb thumb--glyph"><i class="fa-solid fa-cloud-sun-rain" aria-hidden="true"></i></div>
+        <h5>Climate Change &amp; Actuarial Science</h5>
+        <p>Research on how climate risk reshapes actuarial assumptions, with applications proposed for the Turkish insurance market.</p>
+        <div class="chips"><span class="chip">Research</span><span class="chip">Climate risk</span><span class="chip">Non-life</span></div>
+      </article>
+
+      <!-- Project 4 -->
       <article class="project card">
         <a href="https://github.com/ozsamet/PortfolioProjects/blob/main/Python/Coinmarketcap%20Website%20API%20Pull.ipynb" target="_blank" rel="noreferrer" class="thumb">
-          <img src="images/kripto.webp" alt="Automated crypto data collection"/>
+          <img src="images/kripto.webp" alt=""/>
         </a>
         <h5><a href="https://github.com/ozsamet/PortfolioProjects/blob/main/Python/Coinmarketcap%20Website%20API%20Pull.ipynb" target="_blank" rel="noreferrer">Automated Cryptocurrency Data Collection</a></h5>
-        <p>Minute‑level data ingestion using CoinMarketCap API.</p>
+        <p>Minute-level data ingestion using the CoinMarketCap API.</p>
         <div class="chips"><span class="chip">Python</span><span class="chip">API</span><span class="chip">Pandas</span></div>
       </article>
-      <!-- Project 2 -->
+
+      <!-- Project 5 -->
+      <article class="project card">
+        <a href="https://public.tableau.com/app/profile/samet.z4956/viz/AirBnbProject_17225958903760/Dashboard1" target="_blank" rel="noreferrer" class="thumb">
+          <img src="images/airbnb.jpeg" alt=""/>
+        </a>
+        <h5><a href="https://public.tableau.com/app/profile/samet.z4956/viz/AirBnbProject_17225958903760/Dashboard1" target="_blank" rel="noreferrer">Airbnb Tableau Dashboard</a></h5>
+        <p>Visual analysis of Airbnb listing and pricing data.</p>
+        <div class="chips"><span class="chip">Tableau</span><span class="chip">Viz</span></div>
+      </article>
+
+      <!-- Project 6 -->
+      <article class="project card">
+        <a href="https://github.com/ozsamet/PortfolioProjects/blob/main/Python/BIST50.ipynb" target="_blank" rel="noreferrer" class="thumb">
+          <img src="images/borsa.jpeg" alt=""/>
+        </a>
+        <h5><a href="https://github.com/ozsamet/PortfolioProjects/blob/main/Python/BIST50.ipynb" target="_blank" rel="noreferrer">BIST50 Analysis</a></h5>
+        <p>Year-over-year price change analysis on selected stocks.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">yFinance</span></div>
+      </article>
+
+      <!-- Project 7 -->
       <article class="project card">
         <a href="https://github.com/ozsamet/PortfolioProjects/blob/main/SQL/CovidPortfolio.sql" target="_blank" rel="noreferrer" class="thumb">
-          <img src="images/korona.jpg" alt="COVID SQL exploration"/>
+          <img src="images/korona.jpg" alt=""/>
         </a>
-        <h5><a href="https://github.com/ozsamet/PortfolioProjects/blob/main/SQL/CovidPortfolio.sql" target="_blank" rel="noreferrer">Data Exploration in SQL — COVID‑19</a></h5>
+        <h5><a href="https://github.com/ozsamet/PortfolioProjects/blob/main/SQL/CovidPortfolio.sql" target="_blank" rel="noreferrer">Data Exploration in SQL — COVID-19</a></h5>
         <p>Exploratory analysis and metrics on MS SQL Server.</p>
         <div class="chips"><span class="chip">SQL</span><span class="chip">CTE</span><span class="chip">Window</span></div>
       </article>
-      <!-- Project 3 -->
+
+      <!-- Project 8 -->
+      <article class="project card">
+        <a href="https://github.com/ozsamet/PortfolioProjects/blob/main/SQL/Data%20Cleaning%20Project.sql" target="_blank" rel="noreferrer" class="thumb">
+          <img src="images/house.jpg" alt=""/>
+        </a>
+        <h5><a href="https://github.com/ozsamet/PortfolioProjects/blob/main/SQL/Data%20Cleaning%20Project.sql" target="_blank" rel="noreferrer">Data Cleaning in SQL</a></h5>
+        <p>Multi-step cleaning on a housing dataset.</p>
+        <div class="chips"><span class="chip">SQL</span><span class="chip">ETL</span></div>
+      </article>
+
+      <!-- Project 9 -->
       <article class="project card">
         <a href="https://github.com/ozsamet/PortfolioProjects/blob/main/Python/Amazon%20Web%20Scraping.ipynb" target="_blank" rel="noreferrer" class="thumb">
-          <img src="images/amazon.png" alt="Amazon scraping"/>
+          <img src="images/amazon.png" alt=""/>
         </a>
         <h5><a href="https://github.com/ozsamet/PortfolioProjects/blob/main/Python/Amazon%20Web%20Scraping.ipynb" target="_blank" rel="noreferrer">Amazon Web Scraping</a></h5>
         <p>Automated data extraction for price tracking.</p>
         <div class="chips"><span class="chip">Requests</span><span class="chip">BS4</span><span class="chip">Cron</span></div>
       </article>
-      <!-- Project 4 -->
-      <article class="project card">
-        <a href="https://public.tableau.com/app/profile/samet.z4956/viz/AirBnbProject_17225958903760/Dashboard1" target="_blank" rel="noreferrer" class="thumb">
-          <img src="images/airbnb.jpeg" alt="Airbnb Tableau dashboard"/>
-        </a>
-        <h5><a href="https://public.tableau.com/app/profile/samet.z4956/viz/AirBnbProject_17225958903760/Dashboard1" target="_blank" rel="noreferrer">Airbnb Tableau Dashboard</a></h5>
-        <p>Visual analysis of Airbnb data.</p>
-        <div class="chips"><span class="chip">Tableau</span><span class="chip">Viz</span></div>
-      </article>
-      <!-- Project 5 -->
-      <article class="project card">
-        <a href="https://github.com/ozsamet/PortfolioProjects/blob/main/Python/BIST50.ipynb" target="_blank" rel="noreferrer" class="thumb">
-          <img src="images/borsa.jpeg" alt="BIST50 analysis"/>
-        </a>
-        <h5><a href="https://github.com/ozsamet/PortfolioProjects/blob/main/Python/BIST50.ipynb" target="_blank" rel="noreferrer">BIST50 Analysis</a></h5>
-        <p>Year‑over‑year price change analysis on selected stocks.</p>
-        <div class="chips"><span class="chip">Python</span><span class="chip">yFinance</span></div>
-      </article>
-      <!-- Project 6 -->
-      <article class="project card">
-        <a href="https://github.com/ozsamet/PortfolioProjects/blob/main/SQL/Data%20Cleaning%20Project.sql" target="_blank" rel="noreferrer" class="thumb">
-          <img src="images/house.jpg" alt="SQL data cleaning"/>
-        </a>
-        <h5><a href="https://github.com/ozsamet/PortfolioProjects/blob/main/SQL/Data%20Cleaning%20Project.sql" target="_blank" rel="noreferrer">Data Cleaning in SQL</a></h5>
-        <p>Multi‑step cleaning on a housing dataset.</p>
-        <div class="chips"><span class="chip">SQL</span><span class="chip">ETL</span></div>
-      </article>
+
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="container">
+    <h3 class="section-title"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Education</h3>
+    <div class="card edu">
+      <div>
+        <h4>BSc Statistics — Middle East Technical University (METU)</h4>
+        <p>Probability &amp; stochastic modelling, regression, time series, statistical inference.</p>
+      </div>
+      <div class="date" style="color:var(--muted)">Sep 2018 — Jun 2024</div>
     </div>
   </section>
 
   <!-- Contact -->
   <section id="contact" class="container">
-    <h3 class="section-title"><i class="fa-solid fa-paper-plane"></i> Contact</h3>
+    <h3 class="section-title"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Contact</h3>
     <div class="contact-grid">
       <div class="card">
         <form method="post" action="https://api.web3forms.com/submit">
           <input type="hidden" name="access_key" value="a6340827-d870-459a-bd09-6f98b3aeffe7"/>
+          <input type="hidden" name="subject" value="New message from ozsamet.github.io"/>
+          <!-- spam honeypot: bots fill this, humans never see it -->
+          <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
           <div class="row">
-            <input type="text" name="name" placeholder="Full Name" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="text" name="subject" placeholder="Subject" style="grid-column:1/-1">
-            <textarea name="message" placeholder="Your message" required style="grid-column:1/-1"></textarea>
+            <input type="text" name="name" placeholder="Full name" aria-label="Full name" required>
+            <input type="email" name="email" placeholder="Email" aria-label="Email" required>
+            <textarea name="message" placeholder="Your message" aria-label="Your message" required style="grid-column:1/-1"></textarea>
           </div>
-          <button class="btn submit" type="submit"><i class="fa-solid fa-paper-plane"></i> Send</button>
+          <button class="btn submit" type="submit"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i> <span>Send message</span></button>
         </form>
       </div>
       <div class="card">
         <p><strong>Links</strong></p>
-        <p><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/ozsamet/" target="_blank" rel="noreferrer">LinkedIn / ozsamet</a></p>
-        <p><i class="fa-brands fa-github"></i> <a href="https://github.com/ozsamet" target="_blank" rel="noreferrer">GitHub / ozsamet</a></p>
-        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:ozsamet00@gmail.com">ozsamet00@gmail.com</a></p>
+        <p><i class="fa-brands fa-linkedin" aria-hidden="true"></i> <a href="https://www.linkedin.com/in/ozsamet/" target="_blank" rel="noreferrer">LinkedIn / ozsamet</a></p>
+        <p><i class="fa-brands fa-github" aria-hidden="true"></i> <a href="https://github.com/ozsamet" target="_blank" rel="noreferrer">GitHub / ozsamet</a></p>
+        <p><i class="fa-solid fa-envelope" aria-hidden="true"></i> <a href="mailto:ozsamet00@gmail.com">ozsamet00@gmail.com</a></p>
+        <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Türkiye</p>
       </div>
     </div>
   </section>
 
   <footer class="site">
     <div class="container">
-      <small>© <span id="y"></span> SO — All rights reserved.</small>
+      <small>© <span id="y"></span> Samet Öz</small>
     </div>
   </footer>
 
   <script>
-    // Auto year
     document.getElementById('y').textContent = new Date().getFullYear();
 
-    // Active nav link (simple)
     const links=[...document.querySelectorAll('header nav a')];
     const obs=new IntersectionObserver((entries)=>{
       entries.forEach(e=>{
         if(e.isIntersecting){
           links.forEach(l=>l.classList.remove('active'));
-          const id = '#'+e.target.id;
-          const hit = links.find(l=>l.getAttribute('href')===id);
+          const hit = links.find(l=>l.getAttribute('href')==='#'+e.target.id);
           if(hit) hit.classList.add('active');
         }
       })
     },{rootMargin:'-45% 0px -50% 0px',threshold:0});
-    ['about','experience','projects','contact'].forEach(id=>{
+    ['about','experience','projects','education','contact'].forEach(id=>{
       const el=document.getElementById(id); if(el) obs.observe(el);
     });
   </script>
 </body>
 </html>
-
